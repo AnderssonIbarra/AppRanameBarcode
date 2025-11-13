@@ -1,5 +1,4 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Drawing;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -10,9 +9,6 @@ using ZXing.Windows.Compatibility;
 
 namespace AppRanameBarcode
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -77,6 +73,7 @@ namespace AppRanameBarcode
                 int contadorExitosos = 0;
                 int contadorFallidos = 0;
 
+                // Comenzar a procesaar cada archivo
                 foreach (string rutaOrigen in archivos)
                 {
                     string extension = Path.GetExtension(rutaOrigen).ToLower();
@@ -130,6 +127,7 @@ namespace AppRanameBarcode
             }
         }
 
+        // Metodo para leer el codigo de barra desde una imagen
         private string LeerCodigoDeBarra(BitmapSource source)
         {
             var reader = new BarcodeReader
@@ -145,6 +143,7 @@ namespace AppRanameBarcode
             }
             else
             {
+                // Si no se pudo leer el codigo, solicitar entrada manual
                 var entradaManual = new ManualEntryWindow();
 
                 bool? dialogResult = entradaManual.ShowDialog();
