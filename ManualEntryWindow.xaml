@@ -1,0 +1,20 @@
+﻿<Window x:Class="AppRanameBarcode.ManualEntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppRanameBarcode"
+        mc:Ignorable="d"
+        Title="Entrada Manual de Código" Height="200" Width="366"
+        WindowStartupLocation="CenterScreen" Background="#FFD0CFCF"
+        ResizeMode="NoResize"
+        FocusManager.FocusedElement="{Binding ElementName=txtCodigoManual}">
+    <StackPanel Margin="20">
+        <TextBlock Text="No se pudo leer el código. Por favor, ingrésalo manualmente:" Margin="0,0,0,10"/>
+        <TextBox x:Name="txtCodigoManual" Height="30" Margin="0,0,0,20" Background="#FFEFEFEF"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BtnAceptar" Content="Aceptar" Click="BtnAceptar_Click"  IsDefault="True" Margin="0,0,10,0" Background="#FFA4A4A4" Foreground="Black" BorderBrush="#FF353131" Padding="1,1,1,1" BorderThickness="1,1,2,2" FontSize="16" FontWeight="Bold" Width="71"/>
+            <Button Content="Cancelar" IsCancel="True" Background="#FFA4A4A4" Foreground="Black" BorderBrush="#FF353131" Padding="1,1,1,1" BorderThickness="1,1,2,2" FontSize="16" FontWeight="Bold" Width="76"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

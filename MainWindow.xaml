@@ -1,0 +1,20 @@
+﻿<Window x:Class="AppRanameBarcode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppRanameBarcode"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Grid x:Name="gridWindows" Background="#FFD0CFCF">
+        <TextBox x:Name="txtDirectorioOrigen" HorizontalAlignment="Left" Margin="20,20,0,0"  Text="C:/" VerticalAlignment="Top" Width="150" Height="25" FontSize="14" Foreground="#FF464646" BorderBrush="Black"/>
+        <Button x:Name="btnDirectorioOrigen" Content="Directorio Origen" HorizontalAlignment="Left" Margin="185,20,0,0" VerticalAlignment="Top" Height="25" Width="115" ButtonBase.Click="btnDirectorioOrigen_Click" Background="#FFA4A4A4" Foreground="Black" BorderBrush="#FF353131" Padding="1,1,1,1" BorderThickness="1,1,2,2" FontWeight="Bold"/>
+        <TextBox x:Name="txtDirectorioDestino" HorizontalAlignment="Left" Margin="20,60,0,0"  Text="C:/" VerticalAlignment="Top" Width="150" Height="25" FontSize="14" Foreground="#FF464646" BorderBrush="Black"/>
+        <Button x:Name="btnDirectorioDestino" Content="Directorio Destino" HorizontalAlignment="Left" Margin="185,60,0,0" VerticalAlignment="Top" Height="25" ButtonBase.Click="btnDirectorioDestino_Click" Width="115" Background="#FFA4A4A4" Foreground="Black" BorderBrush="#FF353131" Padding="1,1,1,1" BorderThickness="1,1,2,2" FontWeight="Bold"/>
+        <Button x:Name="btnProcesar" Content="Iniciar Proceso" HorizontalAlignment="Left" Margin="20,104,0,0" VerticalAlignment="Top" Height="30" Click="btnProcesar_Click" Width="280" Background="#FFA4A4A4" Foreground="Black" BorderBrush="#FF353131" Padding="1,1,1,1" BorderThickness="1,1,2,2" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="MessageProceso" HorizontalAlignment="Left" Margin="20,144,0,0" TextWrapping="Wrap" Text="---------------------------------" VerticalAlignment="Top" Visibility="Hidden" TextAlignment="Center" Width="280"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="338,10,10,10"/>
+        <Image x:Name="imgProcesando" HorizontalAlignment="Left" Height="373" Margin="354,32,0,0" VerticalAlignment="Top" Width="418"/>
+    </Grid>
+</Window>
